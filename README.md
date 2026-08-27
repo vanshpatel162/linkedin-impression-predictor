@@ -17,7 +17,7 @@ I trained the model on a mock dataset of 100+ LinkedIn posts (`linkedin_data.csv
 * **Mean Absolute Error (MAE):** 437.67 impressions
 * **Root Mean Squared Error (RMSE):** 559.81 impressions
 
-![Actual vs Predicted](Actual_Vs_Predicted.png)
+![Actual vs Predicted](Actual_VS_Predicted.png)
 *(The visualization above shows my test data predictions closely following the perfect accuracy line).*
 
 ## 💡 A Cool ML Lesson I Learned
