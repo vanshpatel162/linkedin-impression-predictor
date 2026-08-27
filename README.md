@@ -1,27 +1,36 @@
-# 🚀 LinkedIn Post Impression Predictor
+# LinkedIn Post Impression Predictor 🚀
 
-## 📌 Overview
-Can Machine Learning predict if a LinkedIn post will go viral? I built a Linear Regression model in Python using Scikit-learn to predict **Day 1 (First 24 Hours)** impressions based on temporal and textual features. 
+This is a simple Machine Learning mini-project I created to predict how many impressions a LinkedIn post will get in its first 24 hours. I built it using Python and Scikit-learn to practice building and evaluating Linear Regression models.
 
-The project includes an interactive Command Line Interface (CLI) that automatically parses raw post text to extract features and generate real-time predictions.
+## How it Works
+I built a Command Line Interface (CLI) where you can paste your drafted LinkedIn post. The Python script automatically scans the text and extracts the features:
+1. **Word count** (measuring dwell time)
+2. **Number of hashtags** (measuring keyword reach)
+3. **Hour posted** (0-23, to factor in audience timing)
 
-## 📊 The Features ($x$)
-1. **Word Count:** Extracted automatically from pasted text (measures dwell time).
-2. **Hashtags:** Extracted automatically from pasted text (measures keyword optimization).
-3. **Hour Posted (0-23):** Manual input (measures timing and audience activity).
+The model takes these 3 inputs and predicts the Day 1 impressions.
 
-## 📈 Model Performance (100+ Rows of Data)
-* **Accuracy ($R^2$ Score):** 0.86
+## Model Performance
+I trained the model on a mock dataset of 100+ LinkedIn posts (`linkedin_data.csv`). 
+
+* **R-squared (R²) Score:** 0.86 
 * **Mean Absolute Error (MAE):** 437.67 impressions
 * **Root Mean Squared Error (RMSE):** 559.81 impressions
 
-![Actual vs Predicted](Actual_VS_Predicted.png)
+![Actual vs Predicted](Actual_vs_Predicted.png)
+*(The visualization above shows my test data predictions closely following the perfect accuracy line).*
 
-## 💡 Real-World ML Insight
-I tested this model on a recent "25 DSA Patterns" post. The model predicted ~1,160 views for Day 1 linear traction, which was highly accurate! However, because the post included a high-value PDF, it triggered an exponential viral loop, reaching 21,000+ views over 7 days. 
+## 💡 A Cool ML Lesson I Learned
+I tested this model on my real "25 DSA Patterns" post. The CLI predicted **1,501 views** for the first day. 
 
-**Takeaway:** Linear regression perfectly captures linear network growth, but mathematically cannot predict the exponential power-law curves of social media algorithms once a high-value asset triggers a massive share loop.
+This was actually a highly accurate prediction for standard linear growth! However, because I attached a useful PDF cheat sheet, people started sharing it, and the post entered a viral loop—reaching **21,000+ views** over 7 days. 
 
-## 💻 Tech Stack
-* **Language:** Python
-* **Libraries:** Scikit-learn, Pandas, NumPy, Matplotlib
+**My biggest takeaway:** Linear regression is great at predicting normal, everyday network growth. But it mathematically cannot predict the exponential spikes (power-law curves) that happen when a high-value asset gets shared repeatedly. 
+
+## How to Run It Locally
+If you want to test the model yourself:
+
+1. Clone this repository.
+2. Install the required libraries:
+   ```bash
+   pip install pandas scikit-learn matplotlib
