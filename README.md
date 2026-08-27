@@ -15,7 +15,7 @@ The project includes an interactive Command Line Interface (CLI) that automatica
 * **Mean Absolute Error (MAE):** 437.67 impressions
 * **Root Mean Squared Error (RMSE):** 559.81 impressions
 
-![Actual vs Predicted](actual_vs_predicted.png)
+![Actual vs Predicted](Actual_VS_Predicted.png)
 
 ## 💡 Real-World ML Insight
 I tested this model on a recent "25 DSA Patterns" post. The model predicted ~1,160 views for Day 1 linear traction, which was highly accurate! However, because the post included a high-value PDF, it triggered an exponential viral loop, reaching 21,000+ views over 7 days. 
